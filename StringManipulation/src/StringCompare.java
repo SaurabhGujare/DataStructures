@@ -21,8 +21,12 @@ public class StringCompare {
         System.out.println("(s5.compareTo(s1): "+(s5.compareTo(s1)));
         System.out.println("(s1.compareTo(s2): "+(s1.compareTo(s2)));
         System.out.println("(s1.compareTo(s6): "+(s1.compareTo(s6)));
-        System.out.println("(s1.compareTo(s1): "+(s1.compareTo(s1)));
+        System.out.println("(s1.compareTo(s3): "+(s1.compareTo(s3)));
         System.out.println("(s1.compareTo(s2): "+(s1.compareToIgnoreCase(s2)));
+
+        String str1 = "Java is a language widely used in Programing world";
+        String replacedStr1 = str1.replace("Java","C++");
+        System.out.println("\n\nstr1: "+str1+"\nreplacedStr1: "+replacedStr1);
 
 
     }
