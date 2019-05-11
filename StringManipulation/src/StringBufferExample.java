@@ -13,6 +13,6 @@ public class StringBufferExample {
         strBuff.append("s");
         System.out.println(strBuff);
 
-        
+
     }
 }
