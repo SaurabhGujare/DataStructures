@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Collections;
+
 public class BinarySearchTree {
 
     public static void main(String[] args){
@@ -19,6 +22,11 @@ public class BinarySearchTree {
         }else{
             System.out.println("Tree is Not balanced");
         }
+
+        int[] array = new int[]{10,5,15,8};
+
+        System.out.println("THe balanced tree for given array elements"+Arrays.toString(array)+" is \n");
+        getBalanceTree(array,0,array.length-1).printInOrder();
 
     }
 
@@ -45,6 +53,24 @@ public class BinarySearchTree {
         }
 
         return (1+Math.max(leftHeight,rightHeight));
+    }
+
+    public static Node getBalanceTree(int[] array,int start, int end){
+        Arrays.sort(array);
+        if(start>end){
+            return null;
+        }
+
+        int mid = (start+end)/2;
+        Node node = new Node(array[mid]);
+
+        node.left = getBalanceTree(array, start,mid-1);
+
+        node.right = getBalanceTree(array,mid+1, end);
+
+        return node;
+
+
     }
 
 
